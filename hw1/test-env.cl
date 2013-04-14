@@ -37,6 +37,21 @@
 			  (VALUE (>>NORM))
 			  (TYPE (HAPPY))))))
 
+(defvar C2* '(CAUSE
+          (ANTE (INFORM (AGENT (HUMAN (F-NAME (FRED))
+				       (GENDER (MALE))))
+			 (RECIP (HUMAN (GENDER (FEMALE))
+				       (F-NAME (BETTY))))
+			 (OBJECT (STATE (VALUE (>NORM))
+					(TYPE (APPEARANCE))
+					(AGENT (HUMAN
+						(GENDER (FEMALE))))))))
+          (BACON (EGGS (BACON)) (CHEESE (BACON)))
+	   (CONSEQ (STATE (AGENT (HUMAN (GENDER (FEMALE))
+					(F-NAME(BETTY))))
+			  (VALUE (>>NORM))
+			  (TYPE (HAPPY))))))
+
 (defvar C3 '(PTRANS (AGENT AGENT0)
 		 (OBJECT OBJECT0)
 		 (SRC LOC0)

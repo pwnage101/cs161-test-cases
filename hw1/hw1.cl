@@ -1,7 +1,7 @@
 ; CS 161 Spring 2013: HW1 skeleton
 
 (defun cad-r (l) (cons (car l) (cddr l))) ; What, suddenly I'm the bad guy for
-		      ; making unintuitive function names?
+					; making unintuitive function names?
 		      ; Meanwhile, caaddr is *totally* self-explanatory.
 
 (defun mapcdr (f l) (cons (car l) (mapcar f (cdr l))))
@@ -138,5 +138,6 @@
 
 (defun COMPARE-FRMS (frame1 frame2)
   (if (equal (car frame1) (car frame2))
-      (set-equalp (cdr frame1) (cdr frame2))
+      (and (set-equalp (cdr frame1) (cdr frame2))
+           (set-equalp (cdr frame2) (cdr frame1)))
       NIL))

@@ -140,5 +140,9 @@
 
 	(COMPARE-FRMS c1 c1*)
 
+	(not (COMPARE-FRMS c2 c2*))
+
+	(not (COMPARE-FRMS c2 c2*))
+
 	(not (COMPARE-FRMS c1 c2))
 ))
