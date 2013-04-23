@@ -1,0 +1,14 @@
+(setq C-LX-1
+      '(((THE) NIL ((D-ATTACH-SF AFT PHYS-OBJ REF (DEF))))
+        ((BIG) (SIZE (VAL (>NORM))) ((D-ATTACH-SF AFT PHYS-OBJ SIZE (<NORM))))
+        ((APPLE) (FRUIT (TYPE (APPLE))) NIL)
+        ((APPLE PIE) (DESSERT) NIL)
+        ((THE BIG APPLE) (NYC) NIL)))
+
+(setq APS-1 '(THE APPLE WAS FOUND IN THE BIG APPLE))
+(setq APS-2 '(APPLE WAS FOUND))
+(setq APS-3 '(APPLE PIE IS TASTY))
+(setq APS-4 '(THE BIG APPLE IS AN EXCITING PLACE))
+(setq APS-5 '(CRAB APPLE))
+
+(load "hw2.lsp")
