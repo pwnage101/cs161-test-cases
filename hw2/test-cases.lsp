@@ -98,7 +98,24 @@
 
        ))
 
+(EXT-WK-MEM '(framei1))
+
 (print
- (list 'test-ext-wk-mem
+ (list 'test-ext-wk-mem-1
+
+       (EQUAL (list-length WK-MEM) 1)
+       (EQUAL (nth 0 WK-MEM) '(framei1))
 
        ))
+
+(EXT-WK-MEM '(framei2))
+
+(print
+ (list 'test-ext-wk-mem-2
+
+       (EQUAL (list-length WK-MEM) 2)
+       (EQUAL (nth 0 WK-MEM) '(framei1))
+       (EQUAL (nth 1 WK-MEM) '(framei2))
+
+       ))
+
