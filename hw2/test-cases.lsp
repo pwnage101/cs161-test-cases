@@ -40,6 +40,10 @@
 
        ))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PROBLEM 2: RECALL-WPH ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 (print
  (list 'test-recall-wph
        
@@ -62,6 +66,9 @@
 
        ))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PROBLEM 3: TOKENIZE ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; There is no easy way of checking the correctness of TOKENIZE, so
 ;; just check it for yourself!
@@ -97,6 +104,10 @@
        (TOKENIZE 'AGENT)
 
        ))
+
+;;;;;;;;;;;;;;;;;;;;;;;
+;; PROBLEM 4: WK-MEM ;;
+;;;;;;;;;;;;;;;;;;;;;;;
 
 (EXT-WK-MEM '(framei1))
 
