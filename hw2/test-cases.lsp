@@ -63,41 +63,42 @@
        ))
 
 
+;; There is no easy way of checking the correctness of TOKENIZE, so
+;; just check it for yourself!
+
 (print
- (list 'test-tokenize
+ (list 'test-tokenize-1
 
-       (EQUAL (TOKENIZE '(ST-CHANGE
-                          (AGENT AGENT)
-                          (FROM (ACQUAINT))
-                          (TO (FRIEND
-                               (OF OF)))))
+       (TOKENIZE '(ST-CHANGE
+                   (AGENT AGENT)
+                   (FROM (ACQUAINT))
+                   (TO (FRIEND
+                        (OF OF)))))
 
-              '(ST-CHANGE
-                (AGENT AGENT001)
-                (FROM (ACQUAINT))
-                (TO (FRIEND
-                     (OF OF001)))))
+       ))
 
+(print
+ (list 'test-tokenize-2
 
-       (EQUAL (TOKENIZE '(MTRANS
-                          (AGENT AGENT)
-                          (RECIP RECIP)
-                          (OBJECT (C-CAUSE
-                                   (ANTE ANTE)
-                                   (CONSEQ (GOAL-FAILURE
-                                            (AGENT AGENT)
-                                            (TIME (FUTURE))))
-                                   (JUSTIF JUSTIF)))))
-              '(MTRANS
-                (AGENT AGENT002)
-                (RECIP RECIP001)
-                (OBJECT (C-CAUSE
-                         (ANTE ANTE001)
-                         (CONSEQ (GOAL-FAILURE
-                                  (AGENT AGENT003)
-                                  (TIME (FUTURE))))
-                         (JUSTIF JUSTIF001)))))
+       (TOKENIZE '(MTRANS
+                   (AGENT AGENT)
+                   (RECIP RECIP)
+                   (OBJECT (C-CAUSE
+                            (ANTE ANTE)
+                            (CONSEQ (GOAL-FAILURE
+                                     (AGENT AGENT)
+                                     (TIME (FUTURE))))
+                            (JUSTIF JUSTIF)))))
+       ))
 
-       (EQUAL (TOKENIZE 'AGENT) 'AGENT004)
+(print
+ (list 'test-tokenize-3
+
+       (TOKENIZE 'AGENT)
+
+       ))
+
+(print
+ (list 'test-ext-wk-mem
 
        ))
