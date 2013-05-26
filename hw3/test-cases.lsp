@@ -53,9 +53,15 @@
                                nil
                                :test #'equal))
 
-       (null (set-exclusive-or (UNIFRAME '((STEAL (AGENT (V AG))
-                                                  (OBJECT (V OBJ)))
-                                           (VEHICLE (IS (V CARV))))
+       (null (set-exclusive-or (UNIFRAME '((ASK (AGENT (V AG))
+                                                (OBJECT (PTRANS (AGENT (V RC))
+                                                                (OBJECT (V AG))
+                                                                (DESTIN (V ESTB))
+                                                                (INSTRU (V VH))))
+                                                (RECIP (V RC)))
+                                           (VEHICLE (IS (V VH)))
+                                           (IN (AGENT (V RC))
+                                               (OBJECT (V VH))))
                                          STORY-FACTS-1
                                          '(T))
                                '(T (AG (HANK)) (OBJ (CAR1)) (CARV (CAR1)))
