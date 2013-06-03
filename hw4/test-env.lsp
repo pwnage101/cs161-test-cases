@@ -16,14 +16,11 @@
 (setf A2ACON
       '(MTRANS (AGENT (HUMAN (F-NAME (SALLY))))
                (RECIP (HUMAN (F-NAME (FREDDY))))
-               (OBJECT (C-CAUSE
-                        (ANTE (ST-CHANGE
-                               (TO (FRIENDS))
-                               (WITH (HUMAN (F-NAME (HANK))))))
-                        (CONSEQ
-                         (GOAL-FAILURE (AGENT (HUMAN (F-NAME (FREDDY))))))
-                        (JUSTIF (STEAL (AGENT (HUMAN (F-NAME (HANK))))
-                                       (OBJECT (VEHICLE (REF (INDEF))))))))))
+               (OBJECT (C-CAUSE (ANTE (ST-CHANGE (TO (FRIENDS))
+                                                 (WITH (HUMAN (F-NAME (HANK))))))
+                                (CONSEQ (GOAL-FAILURE (AGENT (HUMAN (F-NAME (FREDDY))))))
+                                (JUSTIF (STEAL (AGENT (HUMAN (F-NAME (HANK))))
+                                               (OBJECT (VEHICLE (REF (INDEF))))))))))
 
 (setf A5ACON
       '(ROB (RECIP (HUMAN (F-NAME (HAROLD))
@@ -63,7 +60,7 @@
 
 (setf ENG-PATS
       '(
-        (MTRANS (AGENT (PHR (TOLD)) RECIP (PHR (THAT) OBJECT)))
+        (MTRANS (AGENT (PHR (TOLD)) RECIP (PHR (THAT)) OBJECT))
         (ROB (AGENT (PHR (robbed) RECIP (PHR (OF)) OBJECT (PHR (USING)) INSTRU)))
         (STEAL (AGENT (PHR (STOLE)) OBJECT))
         (C-CAUSE (ANTE (PHR (COULD LEAD TO)) CONSEQ (PHR (BECAUSE)) JUSTIF))
