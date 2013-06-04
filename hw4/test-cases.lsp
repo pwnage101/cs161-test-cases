@@ -57,4 +57,8 @@
        (equal (C-GEN SMOKE-3 ENG-PATS D-TREES-1)
               '(SAMUEL SMOKED GAS AT SCHOOL))
 
+       (equal (C-GEN LAP-1 ENG-PATS D-TREES-1)
+              '(THE HANDSOME MALE TOLD A HOMELY FEMALE THAT THE DOG LAPPED
+                UP A COKE))
+
        ))

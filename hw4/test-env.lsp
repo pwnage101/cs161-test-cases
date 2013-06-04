@@ -42,6 +42,17 @@
 
 (setf EP-STMEM '(A2ACON A5ACON A18ACON))
 
+(setf LAP-1
+      '(MTRANS (AGENT (HUMAN (REF (DEF))
+                             (APPEARANCE (>NORM))
+                             (GENDER (MALE))))
+               (RECIP (HUMAN (REF (INDEF))
+                             (APPEARANCE (<NORM))
+                             (GENDER (FEMALE))))
+               (OBJECT (INGEST (AGENT (CANINE (REF (DEF))))
+                               (OBJECT (LIQUID (IS (COKE))
+                                               (REF (INDEF))))))))
+
 (setf EAT-2
       '(MTRANS (AGENT (HUMAN (REF (DEF))
                              (APPEARANCE (<NORM))
@@ -58,10 +69,38 @@
                (DESTIN (LUNGS))
                (LOC (SCHOOL))))
 
+;; (setf ENG-PATS
+;;       '(
+;;         (MTRANS (AGENT (PHR (TOLD)) RECIP (PHR (THAT)) OBJECT))
+;;         (ROB (AGENT (PHR (robbed)) RECIP (PHR (OF)) OBJECT (PHR (USING)) INSTRU))
+;;         (STEAL (AGENT (PHR (STOLE)) OBJECT))
+;;         (C-CAUSE (ANTE (PHR (COULD LEAD TO)) CONSEQ (PHR (BECAUSE)) JUSTIF))
+;;         (ST-CHANGE ((PHR (BECOMING)) TO (PHR (WITH)) WITH))
+;;         (GOAL-FAILURE ((PHR (PROBLEMS FOR)) AGENT))
+;;         (CAUSE (CONSEQ (PHR (BECAUSE)) ANTE))
+;;         (EMOTION (AGENT (PHR (WAS)) VAL IS))
+;;         (ANGER ((PHR (ANGRY))))
+;;         (>NORM ((PHR (VERY))))
+;;         (HUMAN (REF (DECIDE HUMAN) GENDER OWN F-NAME))
+;;         (STORE (REF (PHR (STORE OWNER))))
+;;         (CANINE (REF (PHR (DOG))))
+;;         (GUN (REF (PHR (GUN))))
+;;         (INGEST (AGENT (DECIDE INGEST) OBJECT LOC))
+;;         (COKE (REF (PHR (COKE))))
+;;         (CANINE (REF (PHR (DOG))))
+;;         (FOOD (IS))
+;;         (SCHOOL ((PHR (AT SCHOOL))))
+;;         (VEHICLE (REF (PHR (CAR))))
+;;         (INDEF ((PHR (A))))
+;;         (DEF (PHR (THE)))
+;;         (LIQUID (REF IS))
+;;         (GAS ())
+;;         ))
+
 (setf ENG-PATS
       '(
         (MTRANS (AGENT (PHR (TOLD)) RECIP (PHR (THAT)) OBJECT))
-        (ROB (AGENT (PHR (robbed)) RECIP (PHR (OF)) OBJECT (PHR (USING)) INSTRU))
+        (ROB (AGENT (PHR (ROBBED)) RECIP (PHR (OF)) OBJECT (PHR (USING)) INSTRU))
         (STEAL (AGENT (PHR (STOLE)) OBJECT))
         (C-CAUSE (ANTE (PHR (COULD LEAD TO)) CONSEQ (PHR (BECAUSE)) JUSTIF))
         (ST-CHANGE ((PHR (BECOMING)) TO (PHR (WITH)) WITH))
@@ -81,10 +120,11 @@
         (SCHOOL ((PHR (AT SCHOOL))))
         (VEHICLE (REF (PHR (CAR))))
         (INDEF ((PHR (A))))
-        (DEF (PHR (THE)))
+        (DEF ((PHR (THE))))
         (LIQUID (REF IS))
         (GAS ())
         ))
+
 
 (setf D-TREES-1
       '((HUMAN
