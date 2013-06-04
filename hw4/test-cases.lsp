@@ -16,9 +16,26 @@
 
        ))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; PROBLEM 2,3: C-GEN,DECIDE-PHR ;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PROBLEM 2,3: C-GEN, DECIDE-PHR ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(print
+ (list 'test-decide-phr
+
+       (equal (DECIDE-PHR 'HUMAN HM-1 D-TREES-1)
+              '(HANDSOME))
+
+       (equal (DECIDE-PHR 'HUMAN HM-2 D-TREES-1)
+              '(HOMELY))
+
+       (equal (DECIDE-PHR 'INGEST SAMUEL-1 D-TREES-1)
+              '(ATE))
+
+       (equal (DECIDE-PHR 'INGEST SMOKE-3 D-TREES-1)
+              '(SMOKED))
+
+       ))
 
 (print
  (list 'test-c-gen
@@ -34,6 +51,10 @@
               '(HAROLD WAS VERY ANGRY BECAUSE HANK ROBBED THE STORE OWNER HAROLD
                 OF CASH USING A GUN))
 
+       (equal (C-GEN EAT-2 ENG-PATS D-TREES-1)
+              '(THE UGLY MALE TOLD A PRETTY FEMALE THAT SAMUEL ATE DONUTS))
+
+       (equal (C-GEN SMOKE-3 ENG-PATS D-TREES-1)
+              '(SAMUEL SMOKED GAS AT SCHOOL))
+
        ))
-
-
